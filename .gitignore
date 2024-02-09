@@ -1,0 +1,7 @@
+# Folders
+__pycache__/
+openaibotWin/
+openaibotLin/
+
+# Files
+keys.py
