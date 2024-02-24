@@ -1,7 +1,6 @@
 # Folders
 __pycache__/
-openaibotWin/
-openaibotLin/
+/venv
 
 # Files
 keys.py
