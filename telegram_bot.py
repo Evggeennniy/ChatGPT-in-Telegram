@@ -19,10 +19,11 @@ async def welcome(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
 async def answer(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     user_id = update.effective_user.id
+    user_name = update.effective_user.username
     user_message = update.effective_message.text
     chatgpt_answer = await chatgpt.get_answer(user_id, user_message)
     await update.message.reply_text(chatgpt_answer)
-    utils.logging('Telegram bot responded to a user.')
+    utils.logging(f'Telegram bot responded to @{user_name} id:{user_id}')
 
 
 def main() -> None:
